@@ -14,4 +14,4 @@ Each PARA category has a matching template so new notes start with the right met
 - **Resource Note** — source, key ideas, quotes/highlights, personal thoughts
 - **MOC Note** — Map of Content, used to index and link related notes on a topic
 
-The template files themselves aren't tracked in this repo (see the root `.gitignore`); this README describes their role in the system.
+These template files are generic and contain no personal data, so they're tracked directly in this repo (see the root `.gitignore` for the full whitelist of tracked paths).
