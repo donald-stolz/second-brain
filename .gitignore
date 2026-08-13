@@ -1,0 +1,16 @@
+# This vault is private by default. Only explicitly whitelisted files
+# (README.md, plus repo-level dotfiles below) are tracked in git — every
+# personal note, daily log, clipping, and Obsidian/plugin config stays local.
+
+# Ignore everything...
+*
+
+# ...but allow traversal into every directory so whitelisted files
+# nested inside them can still be found...
+!*/
+
+# ...and allow README files at any depth.
+!README.md
+
+# Keep the repo's own tracking files.
+!.gitignore
