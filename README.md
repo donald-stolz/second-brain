@@ -8,6 +8,8 @@ This repo shares the *structure* of the vault, not its contents. Every actual no
 
 See `.gitignore` for how that's enforced: everything is ignored by default except `README.md` files.
 
+This project implements the steps from the [NextWork project](https://nextwork.ai/portfolio/daring_beige_curious_kangaroo/learnlists/9a720057-cf5a-4b6a-8d30-7b130c5274c5).
+
 ## Structure
 
 | Folder | Purpose |
