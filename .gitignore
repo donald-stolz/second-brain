@@ -7,21 +7,29 @@
 !/.gitignore
 
 !/README.md
+!/AGENTS.md
+!/CLAUDE.md
+!/CONTEXT.md
 
 !/00 Inbox/
 !/00 Inbox/README.md
+!/00 Inbox/CONTEXT.md
 
 !/01 Projects/
 !/01 Projects/README.md
+!/01 Projects/CONTEXT.md
 
 !/02 Areas/
 !/02 Areas/README.md
+!/02 Areas/CONTEXT.md
 
 !/03 Resources/
 !/03 Resources/README.md
+!/03 Resources/CONTEXT.md
 
 !/04 Archive/
 !/04 Archive/README.md
+!/04 Archive/CONTEXT.md
 
 !/Templates/
 !/Templates/README.md
@@ -30,3 +38,24 @@
 !/Templates/MOC Note.md
 !/Templates/Project Note.md
 !/Templates/Resource Note.md
+
+!/.agents/
+!/.agents/skills/
+
+!/.agents/skills/create-note/
+!/.agents/skills/create-note/SKILL.md
+
+!/.agents/skills/link-notes/
+!/.agents/skills/link-notes/SKILL.md
+
+!/.agents/skills/weekly-review/
+!/.agents/skills/weekly-review/SKILL.md
+
+!/.agents/skills/update-index/
+!/.agents/skills/update-index/SKILL.md
+
+!/.agents/skills/inbox-triage/
+!/.agents/skills/inbox-triage/SKILL.md
+
+!/.agents/skills/archive-stale/
+!/.agents/skills/archive-stale/SKILLS.md
