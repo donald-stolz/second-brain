@@ -62,7 +62,20 @@
 !/.agents/skills/inbox-triage/SKILL.md
 
 !/.agents/skills/archive-stale/
-!/.agents/skills/archive-stale/SKILLS.md
+!/.agents/skills/archive-stale/SKILL.md
 
 !/.agents/skills/daily-review/
 !/.agents/skills/daily-review/SKILL.md
+
+# .claude/skills/ mirrors .agents/skills/ via symlinks so Claude Code's
+# harness (which only auto-discovers skills under .claude/skills/) can see
+# them as slash commands. .agents/skills/ above remains the source of truth.
+!/.claude/
+!/.claude/skills/
+!/.claude/skills/create-note
+!/.claude/skills/link-notes
+!/.claude/skills/weekly-review
+!/.claude/skills/update-index
+!/.claude/skills/inbox-triage
+!/.claude/skills/archive-stale
+!/.claude/skills/daily-review
