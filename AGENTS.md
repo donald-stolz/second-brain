@@ -17,6 +17,8 @@ Notes move between folders as their status changes. A completed project moves to
 
 `00 Inbox/Daily Plan/` is an exception to that lifecycle: it holds daily Todo notes (Top 3 + regular checklist, `type: daily`, created from `Templates/Todo Note.md`) managed by the `daily-review` skill. They live there permanently — never triaged, never archived. See `.agents/skills/daily-review/SKILL.md`.
 
+`00 Inbox/daily-notes/` is a separate exception: raw, frontmatter-less scratchpad files named `YYYY-MM-DD.md`, each mixing several unrelated topics in one capture (meeting notes, article notes, stray tasks, ideas). They are not proper vault notes and aren't triaged as whole files — the `inbox-triage` skill breaks each file's content into individual items, merges or promotes each into a proper note, then archives the fully-processed file to `04 Archive/daily-notes/`. See `.agents/skills/inbox-triage/SKILL.md`.
+
 ## Frontmatter Schema
 
 Every note carries these universal fields in YAML frontmatter:
