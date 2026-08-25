@@ -8,7 +8,7 @@ description: Triage a note from 00 Inbox into the correct PARA folder. Use when 
 ## Steps
 
 1. Read the root CONTEXT.md to confirm there are notes in 00 Inbox.
-2. Read 00 Inbox/CONTEXT.md to get the list of notes to triage.
+2. Read 00 Inbox/CONTEXT.md to get the list of notes to triage. This is the top-level note table only — it does not include `00 Inbox/Daily Plan/`, which has its own nested index and is never triaged (see below).
 3. For each inbox note:
    a. Read the note's content and frontmatter.
    b. Determine the correct PARA category based on content:
@@ -29,4 +29,4 @@ description: Triage a note from 00 Inbox into the correct PARA folder. Use when 
 ## When Not to Use
 
 - Do not triage notes that have `status: active` — they were already processed.
-- Do not move Daily Notes (type: daily) out of the Inbox.
+- Do not touch `00 Inbox/Daily Plan/` — those `type: daily` Todo notes live there permanently and are managed by the `daily-review` skill, not triage.

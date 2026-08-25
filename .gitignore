@@ -15,6 +15,9 @@
 !/00 Inbox/README.md
 !/00 Inbox/CONTEXT.md
 
+!/00 Inbox/Daily Plan/
+!/00 Inbox/Daily Plan/CONTEXT.md
+
 !/01 Projects/
 !/01 Projects/README.md
 !/01 Projects/CONTEXT.md
@@ -38,6 +41,7 @@
 !/Templates/MOC Note.md
 !/Templates/Project Note.md
 !/Templates/Resource Note.md
+!/Templates/Todo Note.md
 
 !/.agents/
 !/.agents/skills/
@@ -59,3 +63,6 @@
 
 !/.agents/skills/archive-stale/
 !/.agents/skills/archive-stale/SKILLS.md
+
+!/.agents/skills/daily-review/
+!/.agents/skills/daily-review/SKILL.md

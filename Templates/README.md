@@ -13,5 +13,6 @@ Each PARA category has a matching template so new notes start with the right met
 - **Area Note** — description + active projects + connections
 - **Resource Note** — source, key ideas, quotes/highlights, personal thoughts
 - **MOC Note** — Map of Content, used to index and link related notes on a topic
+- **Todo Note** — daily plan: Top 3 priorities + regular checklist, used in `00 Inbox/Daily Plan/`
 
 These template files are generic and contain no personal data, so they're tracked directly in this repo (see the root `.gitignore` for the full whitelist of tracked paths).
