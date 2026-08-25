@@ -23,14 +23,17 @@ description: Run the weekly review checklist for the vault. Use when asked to do
    - Check the modified date — flag areas not updated in over 30 days
    - Check if Active Projects section has links — flag areas with no linked projects
 
-5. **Archive stale items**: Scan 01 Projects for notes with status "done". Move them to 04 Archive, update their status to "archived", and update both CONTEXT.md files.
+5. **Archive stale items**: Run the archive-stale procedure (read the archive-stale skill for detailed steps), scoped to notes with status "done".
 
-6. **Report summary**: List all changes made during the review:
+6. **Check vault link health**: Run `obsidian orphans` (no incoming links), `obsidian deadends` (no outgoing links), and `obsidian unresolved` (broken wikilinks). Flag any results outside 04 Archive and Templates/ — those two locations are expected to show up here and aren't worth reporting.
+
+7. **Report summary**: List all changes made during the review:
    - Notes triaged from Inbox (count and destinations)
    - Daily Plan weekly rollup (Top 3 completion rate, frequently skipped checklist items)
    - Projects flagged for missing outcomes or next actions
    - Areas flagged as neglected
    - Notes archived
+   - Link health issues flagged (orphans, dead ends, unresolved links)
    - Updated CONTEXT.md files
 
 ## When Not to Use

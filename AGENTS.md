@@ -71,6 +71,32 @@ When you create, move, or delete a note:
 2. Update the destination folder's CONTEXT.md (add a row if moving/creating)
 3. Update the root CONTEXT.md note counts
 
+## Obsidian CLI
+
+The `obsidian` CLI drives the actual running Obsidian app — it is not a filesystem tool. Commands only work while Obsidian is open on this machine, and they act on the active vault.
+
+**Prefer it over raw Read/Edit/Write for the operations it covers.** Edits made through Obsidian's own APIs (`move`, `rename`, `delete`, `property:set`, `create`, `append`, `prepend`) are recognized by Obsidian Sync immediately, same as a manual edit in the app. Edits made by writing directly to disk (the Read/Edit/Write tools) sit outside the app until Obsidian notices the external change on its own — which only happens once Obsidian is reopened, and can lag or get missed depending on sync state. If you end up editing notes via raw file tools while Obsidian is closed, tell the user those changes won't reach their other devices until they reopen Obsidian here.
+
+If an `obsidian` command errors because the app isn't running, fall back to the raw file tools and flag the sync caveat above.
+
+Common operations relevant to this vault's skills:
+
+| Task | Command |
+|---|---|
+| Move a note between PARA folders (link-safe) | `obsidian move path=<path> to=<path>` |
+| Rename a note | `obsidian rename path=<path> name=<name>` |
+| Delete a note | `obsidian delete path=<path>` |
+| Read / set / remove a frontmatter field | `obsidian property:read` / `property:set` / `property:remove` `name=<field> path=<path>` |
+| Create a note from a Templater template (resolves `<% %>` syntax and dates) | `obsidian templater:create-from-template template=<path> file=<path>` |
+| Full-text search the vault | `obsidian search query=<text>` (or `search:context` for line context) |
+| Notes with no incoming / no outgoing links | `obsidian orphans` / `obsidian deadends` |
+| Broken wikilinks | `obsidian unresolved` |
+| Backlinks to a note (check before adding a link) | `obsidian backlinks path=<path>` |
+| Tags / frontmatter properties, vault-wide, with counts | `obsidian tags counts` / `obsidian properties counts` |
+| List or toggle tasks (e.g. in a daily note) | `obsidian tasks` / `obsidian task toggle` |
+
+Run `obsidian help <command>` for full option lists. Operations without a CLI equivalent — writing CONTEXT.md tables, inserting a wikilink into a specific section of a note — still go through the normal Read/Edit/Write tools.
+
 ## Skills
 
-Composable skills are available in `.agents/skills/`. Read a skill's SKILL.md for step-by-step instructions on common vault operations.
+Composable skills are available in `.agents/skills/`. Read a skill's SKILL.md for step-by-step instructions on common vault operations. Skills that move, create, or edit frontmatter on notes use the `obsidian` CLI commands above where applicable.

@@ -13,7 +13,7 @@ description: Create a new note in the vault using the correct PARA template. Use
    - Ongoing responsibility → area (place in 02 Areas)
    - Reference material → resource (place in 03 Resources)
    - Topic index → moc (place in 03 Resources)
-2. Read the matching template from Templates/ to get the correct structure:
+2. Match the note type to its template:
    - inbox → Templates/Inbox Note.md
    - project → Templates/Project Note.md
    - area → Templates/Area Note.md
@@ -21,12 +21,9 @@ description: Create a new note in the vault using the correct PARA template. Use
    - moc → Templates/MOC Note.md
 3. Create the new note file in the destination folder:
    - Use title case with spaces for the filename
-   - Replace Templater syntax with actual values:
-     - `<% tp.date.now("YYYY-MM-DD") %>` → today's date
-     - `<% tp.file.cursor(1) %>` → leave blank for user
-     - `<% tp.file.cursor(2) %>` → leave blank for user
-     - `<% "---" %>` → `---`
-   - Fill in frontmatter fields from the user's request
+   - Run `obsidian templater:create-from-template template="Templates/<Type> Note.md" file="<destination path>"` — this resolves `<% %>` Templater syntax and fills in dates automatically.
+     - `tp.file.cursor(N)` placeholders are left as literal text (they mark cursor position for interactive use, not a value) — replace them with real content in the next step.
+   - Fill in frontmatter fields from the user's request with `obsidian property:set` (falls back to the Edit tool if Obsidian isn't running — see AGENTS.md's Obsidian CLI section), and replace any leftover `tp.file.cursor(N)` text in the body with an Edit.
 4. Add the new note to the destination folder's CONTEXT.md.
 5. Update the root CONTEXT.md note count.
 6. Report the created note's filename and location.

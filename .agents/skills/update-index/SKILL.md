@@ -8,8 +8,8 @@ description: Regenerate all CONTEXT.md files by scanning every note's frontmatte
 ## Steps
 
 1. For each PARA folder (00 Inbox, 01 Projects, 02 Areas, 03 Resources, 04 Archive):
-   a. List all Markdown files in the folder (excluding CONTEXT.md and README.md).
-   b. For each file, read the YAML frontmatter and extract: type, status, summary.
+   a. List all Markdown files in the folder (excluding CONTEXT.md and README.md) — `obsidian files folder=<folder> ext=md` works if Obsidian is running.
+   b. For each file, read the YAML frontmatter and extract: type, status, summary — `obsidian properties path=<file>` returns this without a full file read.
    c. Build a Markdown table with columns: Filename, Type, Status, Summary.
    d. Write the table to that folder's CONTEXT.md, replacing the existing table content.
    e. Count the total number of notes in the folder.

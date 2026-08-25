@@ -18,8 +18,8 @@ A note is considered stale if ANY of the following are true:
    - Read each folder's CONTEXT.md to get the note list.
    - For each note, read its frontmatter and check against the stale criteria above.
 2. For each stale note found:
-   a. Move the file to 04 Archive.
-   b. Update the note's frontmatter:
+   a. Move the file to 04 Archive with `obsidian move path=<source> to=<destination>` (falls back to the Edit/Write tools if Obsidian isn't running — see AGENTS.md's Obsidian CLI section).
+   b. Update the note's frontmatter with `obsidian property:set`:
       - Set `status` to `archived`
       - Update `modified` to today's date
    c. Remove the note's row from the source folder's CONTEXT.md.

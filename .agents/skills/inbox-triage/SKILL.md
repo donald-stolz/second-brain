@@ -16,8 +16,8 @@ description: Triage a note from 00 Inbox into the correct PARA folder. Use when 
       - Is an ongoing responsibility → 02 Areas (type: area)
       - Is reference material, article, or learning → 03 Resources (type: resource)
       - Cannot be categorized → leave in 00 Inbox and skip
-   c. Move the file to the destination folder.
-   d. Update the note's frontmatter:
+   c. Move the file to the destination folder with `obsidian move path=<source> to=<destination>` (falls back to the Edit/Write tools if Obsidian isn't running — see AGENTS.md's Obsidian CLI section).
+   d. Update the note's frontmatter with `obsidian property:set`:
       - Change `type` to match the destination folder
       - Change `status` from `inbox` to `active`
       - Update `modified` to today's date
